@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <%-include('partials/head') %>
+  </head>
+  <body>
+  <%-include('partials/header') %>
+    <h1>Fruits Show Page</h1>
+    <h4><strong>Name:</strong><%=fruit.name %></h4>
+    <p><strong>Color:</strong><%=fruit.color %></p>
+    <p>
+      <% if (fruit.readyToEat) { %>
+      Ready to eat </p>
+      <%} else {%>
+      Not ready to eat </p> 
+      <% } %>
+  </body>
+</html>

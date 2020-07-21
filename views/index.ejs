@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href='/css/main.css'  rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+  <!-- partials header -->
+  <%-include('partials/header') %>
+    <h1>Fruits</h1>
+  <ul>    
+    <% for (let i = 0; i < fruits.length; i++) { %>
+      <li>
+        <a href="/fruits/<%= fruits[i]._id %>">
+          <%= fruits[i].name %>
+        </a>
+        <form action='/fruits/<%= fruits[i]._id %>?_method=DELETE' method='POST'>
+          <button type='submit'>delete</button>
+        </form>
+        <button><a href="/fruits/<%= fruits[i]._id %>/edit">Update</a></button>
+      </li>
+    <% } %>
+
+  </ul>
+  </body>
+</html>

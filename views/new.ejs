@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <%-include('partials/head') %>
+    <title>Express Fruits</title>
+  </head>
+  <body>
+    <%-include('partials/header')%>
+    <h1> Fruits New Page </h1>
+
+
+  <form action="/fruits" method="POST">
+      <div>
+        <label for='name'>Name</label>
+        <input type='text' id='name' name='name' />
+      </div>
+      <div>
+        <label for='color'>Color</label>
+        <input type='text' id='color' name='color' />
+      </div>
+      <div>
+        <label for='readyToEat'>Ready to eat</label>
+        <input type='checkbox' id='readyToEat' name='readyToEat' />
+      </div>
+      <input type='submit' value='Add new fruit' />
+    </form>
+
+  </body>
+  </html>
